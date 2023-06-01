@@ -147,6 +147,9 @@ header ul li a {
   text-align: center;
   font-weight: bolder;
 }
+header ul li:hover a {
+  color: #8b8b8b;
+}
 .icon a {
   font-size: 20px;
   margin-right: 10px;
