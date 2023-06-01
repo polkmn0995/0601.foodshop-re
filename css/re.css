@@ -1,1 +1,341 @@
 @charset "utf-8";
+/* 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Signika:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  color: #333;
+  font-size: 14px;
+}
+html,
+body {
+  height: 100%;
+}
+h1 {
+  font-size: 5em;
+  font: bold 7.5vw/1.6 "Signika", sans-serif;
+  user-select: none;
+}
+h1 span {
+  display: inline-block;
+  animation: float 0.2s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: none;
+  }
+  33% {
+    transform: translateY(-1px) rotate(-2deg);
+  }
+  66% {
+    transform: translateY(1px) rotate(2deg);
+  }
+}
+body:hover span {
+  animation: bounce 0.6s 2;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+span:nth-child(4n) {
+  color: hsl(50, 75%, 55%);
+  text-shadow: 1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%),
+    3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%);
+}
+span:nth-child(4n-1) {
+  color: hsl(135, 35%, 55%);
+  text-shadow: 1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%),
+    3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%);
+}
+span:nth-child(4n-2) {
+  color: hsl(155, 35%, 60%);
+  text-shadow: 1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%),
+    3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%);
+}
+span:nth-child(4n-3) {
+  color: hsl(30, 65%, 60%);
+  text-shadow: 1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%),
+    3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%);
+}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.25s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.35s;
+}
+h1 span:nth-child(9) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(10) {
+  animation-delay: 0.45s;
+}
+/* header */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border-bottom: 1px solid #333;
+  overflow: hidden;
+  text-align: center;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 20%;
+}
+.logo a {
+  font-weight: bolder;
+  font-size: 30px;
+}
+header ul {
+  display: inline-block;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+header ul li {
+  padding: 5px;
+  line-height: 70px;
+}
+header ul li a {
+  text-align: center;
+  font-weight: bolder;
+}
+.icon a {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.search-box {
+  display: block;
+  display: flex;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  width: 20%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.search-box i {
+  margin-top: 8px;
+  margin-left: 5px;
+}
+.search-box input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+.fixBn {
+  width: 21%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #333;
+  text-align: center;
+  background-color: white;
+}
+.fixBn video {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+.fixBn h2 {
+  font-family: fantasy;
+  color: rgb(1, 65, 1);
+}
+.fixBn a p {
+  margin-top: 15px;
+  text-decoration: underline;
+}
+.contents {
+  width: 79%;
+  float: right;
+  position: relative;
+}
+.mainbg {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  position: relative;
+}
+.mainbg > img {
+  float: right;
+  width: 50%;
+}
+.text {
+  width: 80%;
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+.text p {
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+}
+.text p::first-letter {
+  font-size: 22px;
+  font-weight: bolder;
+  color: rgb(1, 65, 1);
+}
+.magazine {
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.magazine::before {
+  content: "Magazine";
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bolder;
+  line-height: 150px;
+}
+.con_bn {
+  width: 33.3%;
+  float: left;
+  overflow: hidden;
+}
+.con_bn:nth-child(2) {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.con {
+  width: 83%;
+  margin: auto;
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 200;
+  margin-bottom: 100px;
+}
+.con a {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: underline;
+  display: block;
+  padding: 20px 0;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 10%;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+footer ul {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+footer ul li {
+  display: block;
+  padding: 0 10px;
+}
+footer p {
+  color: #eee;
+  text-align: center;
+}
+.gnb-mb-sns {
+  display: flex;
+  gap: 0 10px;
+}
+.gnb-mb-sns li a {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 0;
+  transition: bacground 0.3s;
+  overflow: hidden;
+}
+.gnb-mb-sns li a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  transition: background-position 0.3s;
+}
+.gnb-mb-sns li a:hover {
+  background-color: black;
+}
+.i-fb::before {
+  background: url("../images/icon_sns.png") no-repeat;
+  background-position: 0 0;
+}
+.i-fb:hover::before {
+  background-position: -30px 0;
+}
+.i-is::before {
+  background: url("../images/icon_sns.png") no-repeat;
+  background-position: 0 -30px;
+}
+.i-is:hover::before {
+  background-position: -30px -30px;
+}
+.i-yt::before {
+  background: url("../images/icon_sns.png") no-repeat;
+  background-position: 0 -60px;
+}
+.i-yt:hover::before {
+  background-position: -30px -60px;
+}
